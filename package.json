@@ -1,0 +1,14 @@
+{
+  "name": "taskflow-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend && rm -rf dist && cp -r frontend/dist dist",
+    "preview": "npm run preview --workspace=frontend",
+    "clean": "npm run clean --workspace=frontend && rm -rf dist"
+  }
+}
